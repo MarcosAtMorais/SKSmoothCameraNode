@@ -15,6 +15,9 @@
 		C6E689AB22ABFC090061E879 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6E689A922ABFC090061E879 /* LaunchScreen.storyboard */; };
 		C6E689B322ABFE1D0061E879 /* Background.png in Resources */ = {isa = PBXBuildFile; fileRef = C6E689B222ABFE1D0061E879 /* Background.png */; };
 		C6E689B722AC045E0061E879 /* CGPoint+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E689B622AC045E0061E879 /* CGPoint+Extensions.swift */; };
+		C6E689BB22AC076C0061E879 /* SKSmoothCameraNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E689BA22AC076C0061E879 /* SKSmoothCameraNode.swift */; };
+		C6E689C322AC0B620061E879 /* TrailParticleEffect.sks in Resources */ = {isa = PBXBuildFile; fileRef = C6E689C222AC0B620061E879 /* TrailParticleEffect.sks */; };
+		C6E689C622AC0E070061E879 /* GameScene+Touches.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E689C522AC0E070061E879 /* GameScene+Touches.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		C6E689AC22ABFC090061E879 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C6E689B222ABFE1D0061E879 /* Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Background.png; sourceTree = "<group>"; };
 		C6E689B622AC045E0061E879 /* CGPoint+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+Extensions.swift"; sourceTree = "<group>"; };
+		C6E689BA22AC076C0061E879 /* SKSmoothCameraNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKSmoothCameraNode.swift; sourceTree = "<group>"; };
+		C6E689C222AC0B620061E879 /* TrailParticleEffect.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = TrailParticleEffect.sks; sourceTree = "<group>"; };
+		C6E689C522AC0E070061E879 /* GameScene+Touches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameScene+Touches.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,13 +66,12 @@
 		C6E6899922ABFC080061E879 /* SKSmoothCameraNode */ = {
 			isa = PBXGroup;
 			children = (
+				C6E689C722AC0E460061E879 /* Particles */,
+				C6E689C422AC0DEE0061E879 /* Scene Extensions */,
 				C6E689B522ABFE290061E879 /* Core */,
 				C6E689B422ABFE200061E879 /* External Resources */,
 				C6E689A022ABFC080061E879 /* GameScene.swift */,
-				C6E689A422ABFC080061E879 /* Main.storyboard */,
-				C6E689A722ABFC090061E879 /* Assets.xcassets */,
-				C6E689A922ABFC090061E879 /* LaunchScreen.storyboard */,
-				C6E689AC22ABFC090061E879 /* Info.plist */,
+				C6E689BA22AC076C0061E879 /* SKSmoothCameraNode.swift */,
 			);
 			path = SKSmoothCameraNode;
 			sourceTree = "<group>";
@@ -82,11 +87,31 @@
 		C6E689B522ABFE290061E879 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				C6E689A422ABFC080061E879 /* Main.storyboard */,
+				C6E689A722ABFC090061E879 /* Assets.xcassets */,
+				C6E689A922ABFC090061E879 /* LaunchScreen.storyboard */,
+				C6E689AC22ABFC090061E879 /* Info.plist */,
 				C6E6899A22ABFC080061E879 /* AppDelegate.swift */,
 				C6E689A222ABFC080061E879 /* GameViewController.swift */,
 				C6E689B622AC045E0061E879 /* CGPoint+Extensions.swift */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		C6E689C422AC0DEE0061E879 /* Scene Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C6E689C522AC0E070061E879 /* GameScene+Touches.swift */,
+			);
+			path = "Scene Extensions";
+			sourceTree = "<group>";
+		};
+		C6E689C722AC0E460061E879 /* Particles */ = {
+			isa = PBXGroup;
+			children = (
+				C6E689C222AC0B620061E879 /* TrailParticleEffect.sks */,
+			);
+			path = Particles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,6 +174,7 @@
 			files = (
 				C6E689A622ABFC080061E879 /* Main.storyboard in Resources */,
 				C6E689A822ABFC090061E879 /* Assets.xcassets in Resources */,
+				C6E689C322AC0B620061E879 /* TrailParticleEffect.sks in Resources */,
 				C6E689AB22ABFC090061E879 /* LaunchScreen.storyboard in Resources */,
 				C6E689B322ABFE1D0061E879 /* Background.png in Resources */,
 			);
@@ -161,9 +187,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6E689C622AC0E070061E879 /* GameScene+Touches.swift in Sources */,
 				C6E689A122ABFC080061E879 /* GameScene.swift in Sources */,
 				C6E689A322ABFC080061E879 /* GameViewController.swift in Sources */,
 				C6E689B722AC045E0061E879 /* CGPoint+Extensions.swift in Sources */,
+				C6E689BB22AC076C0061E879 /* SKSmoothCameraNode.swift in Sources */,
 				C6E6899B22ABFC080061E879 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -312,7 +340,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K2S97N6WJD;
-				INFOPLIST_FILE = SKSmoothCameraNode/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/SKSmoothCameraNode/Core/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -330,7 +358,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K2S97N6WJD;
-				INFOPLIST_FILE = SKSmoothCameraNode/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/SKSmoothCameraNode/Core/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
