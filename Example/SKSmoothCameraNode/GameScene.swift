@@ -14,7 +14,7 @@ class GameScene: SKScene {
     
     let smoothCamera: SKSmoothCameraNode = {
         
-        let smoothCamera = SKSmoothCameraNode()
+        let smoothCamera = SKSmoothCameraNode(cameraAlpha: 0.8)
         smoothCamera.setScale(2.0)
         return smoothCamera
         
