@@ -7,11 +7,12 @@
 //
 
 import SpriteKit
-import GameplayKit
-
 
 class GameScene: SKScene {
     
+    // MARK: SKSmoothCameraNode Declaration
+    
+    // STEP 1
     let smoothCamera: SKSmoothCameraNode = {
         
         let smoothCamera = SKSmoothCameraNode(cameraAlpha: 0.8)
@@ -19,6 +20,9 @@ class GameScene: SKScene {
         return smoothCamera
         
     }()
+    
+    // MARK: Other Declarations
+    // (only for demonstration purposes)
     
     lazy var background: SKSpriteNode = {
         
@@ -62,10 +66,15 @@ class GameScene: SKScene {
     // MARK: Setup Methods
     override func didMove(to view: SKView) {
         
-        self.addChild(self.background)
-        self.addChild(self.player)
+        // STEP 2
+        // You should attribute the smoothCamera created above as the SKScene 'camera' property reference here.
         self.camera = smoothCamera
         
+        // Other setups (only for demonstration purposes)
+        
+        self.addChild(self.background)
+        
+        self.addChild(self.player)
         self.player.addChild(self.playerTrail)
         self.playerTrail.targetNode = self
         
@@ -74,6 +83,9 @@ class GameScene: SKScene {
     // MARK: Render Cycle Methods
     override func update(_ currentTime: TimeInterval) {
         
+        // STEP 3
+       // This method should be called so that the camera gets updated with the position of the target node.
+       // In this case, the player is the target node. So we send the position property as a parameter (CGPoint).
         self.smoothCamera.setCamera(position: self.player.position)
         
     }
