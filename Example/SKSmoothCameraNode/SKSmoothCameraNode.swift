@@ -16,6 +16,8 @@ class SKSmoothCameraNode: SKCameraNode {
     
     /** This attribute determines the delay in which the smooth camera is going to be oriented.
         It is highly recommended that this value stays in between 2.0 and 0.1.
+     
+        This attribute can be changed during gameplay as you wish.
      */
     var cameraAlpha: CGFloat = 0.7 {
         didSet {
@@ -52,7 +54,7 @@ class SKSmoothCameraNode: SKCameraNode {
      Method that updates the camera with the desired position related to the Scene.
      - parameter position: the position of the target node in which the camera is going to be updated.
      */
-    func setCamera(position: CGPoint) {
+    public func setCamera(position: CGPoint) {
         
         let actualPosition = position
         let smoothX = self.smoothCameraPosition.x * (1-self.cameraAlpha) + (actualPosition.x * self.cameraAlpha)
