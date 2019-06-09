@@ -11,142 +11,168 @@ import SpriteKit
 public extension CGPoint {
     
     /**
-     * Adds two CGPoint values and returns the result as a new CGPoint.
+     Adds two CGPoint values and returns the result as a new CGPoint.
+     - parameters:
+     - left: the first CGPoint values.
+     - right: the second CGPoint values.
+     - Returns: The result from the sum of both as a new CGPoint.
      */
     static func + (left: CGPoint, right: CGPoint) -> CGPoint {
         return CGPoint(x: left.x + right.x, y: left.y + right.y)
     }
     
     /**
-     * Increments a CGPoint with the value of another.
+     Increments a CGPoint with the value of another.
+     - parameters:
+     - left: the first CGPoint values.
+     - right: the second CGPoint values.
      */
     static func += (left: inout CGPoint, right: CGPoint) {
         left = left + right
     }
     
     /**
-     * Adds a CGVector to this CGPoint and returns the result as a new CGPoint.
+     Adds a CGVector to this CGPoint and returns the result as a new CGPoint.
+     - parameters:
+     - left: the first CGPoint values.
+     - right: the second CGVector values.
+     - Returns: The result from the sum of both as a new CGPoint.
      */
     static func + (left: CGPoint, right: CGVector) -> CGPoint {
         return CGPoint(x: left.x + right.dx, y: left.y + right.dy)
     }
     
     /**
-     * Increments a CGPoint with the value of a CGVector.
+     Increments a CGPoint with the value of a CGVector.
+     - parameters:
+     - left: the first CGPoint values.
+     - right: the second CGVector values.
      */
     static func += (left: inout CGPoint, right: CGVector) {
         left = left + right
     }
     
     /**
-     * Subtracts two CGPoint values and returns the result as a new CGPoint.
+     Subtracts two CGPoint values and returns the result as a new CGPoint.
+     - parameters:
+     - left: the first CGPoint values.
+     - right: the second CGPoint values.
+     - Returns: The result from the subtraction of both as a new CGPoint.
      */
     static func - (left: CGPoint, right: CGPoint) -> CGPoint {
         return CGPoint(x: left.x - right.x, y: left.y - right.y)
     }
     
     /**
-     * Decrements a CGPoint with the value of another.
+     Decrements a CGPoint with the value of another.
+     - parameters:
+     - left: the first CGPoint values.
+     - right: the second CGPoint values.
      */
     static func -= (left: inout CGPoint, right: CGPoint) {
         left = left - right
     }
     
     /**
-     * Subtracts a CGVector from a CGPoint and returns the result as a new CGPoint.
+     Subtracts a CGVector from a CGPoint and returns the result as a new CGPoint.
+     - parameters:
+     - left: the first CGPoint values.
+     - right: the second CGVector values.
+     - Returns: The result from the subtraction of both as a new CGPoint.
      */
     static func - (left: CGPoint, right: CGVector) -> CGPoint {
         return CGPoint(x: left.x - right.dx, y: left.y - right.dy)
     }
     
     /**
-     * Decrements a CGPoint with the value of a CGVector.
+     Decrements a CGPoint with the value of a CGVector.
+     - parameters:
+     - left: the first CGPoint values.
+     - right: the second CGVector values.
      */
     static func -= (left: inout CGPoint, right: CGVector) {
         left = left - right
     }
     
     /**
-     * Multiplies two CGPoint values and returns the result as a new CGPoint.
+     Multiplies two CGPoint values and returns the result as a new CGPoint.
+     - parameters:
+     - left: the first CGPoint values.
+     - right: the second CGPoint values.
+     - Returns: The result from the multiplication of both as a new CGPoint.
      */
     static func * (left: CGPoint, right: CGPoint) -> CGPoint {
         return CGPoint(x: left.x * right.x, y: left.y * right.y)
     }
     
     /**
-     * Multiplies a CGPoint with another.
+     Multiplies a CGPoint with another.
+     - parameters:
+     - left: the first CGPoint values.
+     - right: the second CGPoint values.
      */
     static func *= (left: inout CGPoint, right: CGPoint) {
         left = left * right
     }
     
     /**
-     * Multiplies the x and y fields of a CGPoint with the same scalar value and
-     * returns the result as a new CGPoint.
-     */
-    static func * (point: CGPoint, scalar: CGFloat) -> CGPoint {
-        return CGPoint(x: point.x * scalar, y: point.y * scalar)
-    }
-    
-    /**
-     * Multiplies the x and y fields of a CGPoint with the same scalar value.
-     */
-    static func *= (point: inout CGPoint, scalar: CGFloat) {
-        point = point * scalar
-    }
-    
-    /**
-     * Multiplies a CGPoint with a CGVector and returns the result as a new CGPoint.
+     Multiplies a CGPoint with a CGVector and returns the result as a new CGPoint.
+     - parameters:
+     - left: the first CGPoint values.
+     - right: the second CGVector values.
+     - Returns: The result from the multiplication of both as a new CGPoint.
      */
     static func * (left: CGPoint, right: CGVector) -> CGPoint {
         return CGPoint(x: left.x * right.dx, y: left.y * right.dy)
     }
     
     /**
-     * Multiplies a CGPoint with a CGVector.
+     Multiplies a CGPoint with a CGVector.
+     - parameters:
+     - left: the first CGPoint values.
+     - right: the second CGVector values.
      */
     static func *= (left: inout CGPoint, right: CGVector) {
         left = left * right
     }
     
     /**
-     * Divides two CGPoint values and returns the result as a new CGPoint.
+     Divides two CGPoint values and returns the result as a new CGPoint.
+     - parameters:
+     - left: the first CGPoint values.
+     - right: the second CGPoint values.
+     - Returns: The result from the division of both as a new CGPoint.
      */
     static func / (left: CGPoint, right: CGPoint) -> CGPoint {
         return CGPoint(x: left.x / right.x, y: left.y / right.y)
     }
     
     /**
-     * Divides a CGPoint by another.
+     Divides a CGPoint by another.
+     - parameters:
+     - left: the first CGPoint values.
+     - right: the second CGPoint values.
      */
     static func /= (left: inout CGPoint, right: CGPoint) {
         left = left / right
     }
     
     /**
-     * Divides the x and y fields of a CGPoint by the same scalar value and returns
-     * the result as a new CGPoint.
-     */
-    static func / (point: CGPoint, scalar: CGFloat) -> CGPoint {
-        return CGPoint(x: point.x / scalar, y: point.y / scalar)
-    }
-    
-    /**
-     * Divides the x and y fields of a CGPoint by the same scalar value.
-     */
-    static func /= (point: inout CGPoint, scalar: CGFloat) {
-        point = point / scalar
-    }
-    
-    /**
-     * Divides a CGPoint by a CGVector and returns the result as a new CGPoint.
+     Divides a CGPoint by a CGVector and returns the result as a new CGPoint.
+     - parameters:
+     - left: the first CGPoint values.
+     - right: the second CGVector values.
+     - Returns: The result from the division of both as a new CGPoint.
      */
     static func / (left: CGPoint, right: CGVector) -> CGPoint {
         return CGPoint(x: left.x / right.dx, y: left.y / right.dy)
     }
-    
+
     /**
-     * Divides a CGPoint by a CGVector.
+     Divides a CGPoint by a CGVector.
+     - parameters:
+     - left: the first CGPoint values.
+     - right: the second CGVector values.
      */
     static func /= (left: inout CGPoint, right: CGVector) {
         left = left / right
