@@ -2,7 +2,7 @@
   <img src="https://thumbs.gfycat.com/GlamorousIncredibleKookaburra-size_restricted.gif">
 </p>
 
-# VHS Effect
+# SKSmoothCameraNode
 [![Swift](https://img.shields.io/badge/Swift-5.0-orange.svg)](https://swift.org)
 [![Xcode](https://img.shields.io/badge/Xcode-10.2.1-blue.svg)](https://developer.apple.com/xcode)
 
