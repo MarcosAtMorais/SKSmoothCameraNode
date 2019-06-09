@@ -23,7 +23,7 @@ class GameScene: SKScene {
     
     // MARK: Other Declarations
     // (only for demonstration purposes)
-    
+
     lazy var background: SKSpriteNode = {
         
         let background = SKSpriteNode(imageNamed: "Background")
