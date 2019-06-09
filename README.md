@@ -1,5 +1,5 @@
 <p align="center"> 
-  <img src="https://thumbs.gfycat.com/GlamorousIncredibleKookaburra-small.gif">
+  <img src="https://thumbs.gfycat.com/GlamorousIncredibleKookaburra-size_restricted.gif">
 </p>
 
 # VHS Effect
