@@ -178,5 +178,4 @@ public extension CGPoint {
         left = left / right
     }
 
-    
 }
